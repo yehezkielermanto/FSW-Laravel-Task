@@ -14,16 +14,16 @@ class JadwalMahasiswa extends Migration
     public function up()
     {
         Schema::create('jadwal_mahasiswa', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_jadwal');
             $table->unsignedInteger('id_matkul');
             $table->unsignedInteger('id_mahasiswa');
             $table
                 ->foreign('id_matkul')
-                ->references('id')
+                ->references('id_matkul')
                 ->on('mata_kuliah');
             $table
                 ->foreign('id_mahasiswa')
-                ->references('id')
+                ->references('id_mahasiswa')
                 ->on('mahasiswa');
         });
     }

@@ -15,13 +15,15 @@ class Mahasiswa extends Migration
     {
         //
         Schema::create('mahasiswa', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_mahasiswa');
             $table->unsignedInteger('id_prodi');
             $table
                 ->foreign('id_prodi')
-                ->references('id')
+                ->references('id_prodi')
                 ->on('prodi');
             $table->string('nama_mahasiswa');
+            $table->string('email');
+            $table->string('password');
         });
     }
 

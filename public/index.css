@@ -1,0 +1,10 @@
+.link-logout {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 600px) {
+  .link-logout {
+    justify-content: start;
+  }
+}

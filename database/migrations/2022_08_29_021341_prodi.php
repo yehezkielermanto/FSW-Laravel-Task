@@ -15,7 +15,7 @@ class Prodi extends Migration
     {
         //
         Schema::create('prodi', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_prodi');
             $table->string('nama_prodi');
         });
     }

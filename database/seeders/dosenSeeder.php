@@ -13,8 +13,20 @@ class dosenSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('dosen')->insert([
-            'nama_dosen' => 'Antonius, S.Kom., M.Kom.',
-        ]);
+        $arrayDosen = [
+            'Antonius, S.Kom., M.Kom.',
+            'Budi, Spsi.',
+            'Santoso, S.H., M.H.',
+            'Andi, S.T., M.T.',
+            'Tono, S.E., M.M.',
+        ];
+        $namaDosen = ['antonius', 'budi', 'santoso', 'andi', 'tono'];
+        for ($i = 0; $i < count($arrayDosen); $i++) {
+            DB::table('dosen')->insert([
+                'nama_dosen' => $arrayDosen[$i],
+                'email' => $namaDosen[$i] . '@mail.com',
+                'password' => $namaDosen[$i] . '123',
+            ]);
+        }
     }
 }

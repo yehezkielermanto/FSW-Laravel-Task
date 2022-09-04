@@ -14,11 +14,11 @@ class MataKuliah extends Migration
     public function up()
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_matkul');
             $table->unsignedInteger('id_dosen');
             $table
                 ->foreign('id_dosen')
-                ->references('id')
+                ->references('id_dosen')
                 ->on('dosen');
             $table->string('nama_matkul');
             $table->string('ruang_matkul');

@@ -15,8 +15,10 @@ class Dosen extends Migration
     {
         //
         Schema::create('dosen', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_dosen');
             $table->string('nama_dosen');
+            $table->string('email');
+            $table->string('password');
         });
     }
 
